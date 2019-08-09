@@ -707,7 +707,7 @@ class OBJECT_OT_writeSHM(bpy.types.Operator):
                 if self.surfaceFileType == 'stl':
                     bpy.ops.export_mesh.stl(filepath=filenameandpath, check_existing=False, ascii=True, use_mesh_modifiers=True)
                 elif self.surfaceFileType == 'obj':
-                    export_obj.save(bpy.ops, bpy.context, filepath=filenameandpath, use_materials=False, use_selection=True)
+                    export_obj.save(bpy.context, filepath=filenameandpath, use_materials=False, use_selection=True)
                 ob.select = False
                 
 # EnGrid export start. Code from io_export_engrid.py written by Oliver Gloth (enGits GmbH)
